@@ -12,3 +12,4 @@ function theme_enqueue_styles() {
 require_once( get_stylesheet_directory() . '/library/artists.php' );
 require_once( get_stylesheet_directory() . '/library/exhipitions.php' );
 require_once( get_stylesheet_directory() . '/library/opportunities.php' );
+require_once( get_stylesheet_directory() . '/library/media-fields.php' );
