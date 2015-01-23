@@ -87,6 +87,8 @@ function exhibitiona_metaboxes( array $meta_boxes ) {
 
     $prefix = '_exhib_';
 
+//// Fields for Exhibition Start and End Date ////////
+
     $meta_boxes['exhibitions_metabox'] = array(
         'id'            => 'exhibitions_metabox',
         'title'         => __( 'Exhibition Details', 'cmb2' ),
@@ -113,6 +115,30 @@ function exhibitiona_metaboxes( array $meta_boxes ) {
 			),
         ),
     );
+
+////// Field to Choose Exhibition Locations ///////
+
+    $meta_boxes['exhib_location_metabox'] = array(
+        'id'            => 'exhib_location_metabox',
+        'title'         => __( 'Exhibition Location', 'cmb2' ),
+        'object_types'  => array( 'exhibitions', ), // Post type
+        'context'       => 'side',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // Keep the metabox closed by default
+        'fields'        => array(
+            array(
+			    'name' => 'Choose Exhibition Location',
+			    'desc' => '',
+			    'id' => $prefix . 'location',
+			    'taxonomy' => 'location', //Enter Taxonomy Slug
+			    'type' => 'taxonomy_radio', 
+			),
+
+        ),
+    );
+
 
     $meta_boxes['exhib_images_metabox'] = array(
         'id'            => 'exhib_images_metabox',
