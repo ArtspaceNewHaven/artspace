@@ -13,3 +13,6 @@ require_once( get_stylesheet_directory() . '/library/artists.php' );
 require_once( get_stylesheet_directory() . '/library/exhipitions.php' );
 require_once( get_stylesheet_directory() . '/library/opportunities.php' );
 require_once( get_stylesheet_directory() . '/library/media-fields.php' );
+
+// Add locations taxonomy for Exhibitions
+// Main Gallery, Project Room, Flat File, Crown St. Window, The Lot, Shop Window, Offsite
