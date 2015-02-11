@@ -90,6 +90,7 @@ $include-html-global-classes: $include-html-classes;
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$lato: 'Lato', sans-serif;
 
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
@@ -115,18 +116,30 @@ $include-html-global-classes: $include-html-classes;
 // $jet         : #222222;
 // $black       : #000000;
 
+$blood-moon: #af5b3e;
+$cali-orange: #e77d24;
+$florida-orange: #e77d24;
+$mustard: #c8b92d;
+$citrus: #e6da59;
+$lilac: #7a6a82;
+$dark-lilac: #493d51;
+$perfect-teal: #459b97;
+$grayest: #5e5e5e;
+$artspace-floor: #dbd5e0;
+$gray: #dbd5e0;
+
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+ $primary-color: $lilac;
+ $secondary-color: $florida-orange;
+ $alert-color: $citrus;
+ $success-color: $perfect-teal;
+ $warning-color: $blood-moon;
+ $info-color: $citrus;
 
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+ $body-font-family: $lato;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -195,8 +208,8 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
-// $header-font-weight: $font-weight-normal;
+ $header-font-family: $lato;
+ $header-font-weight: 700;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;
@@ -233,7 +246,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
-// $paragraph-font-weight: $font-weight-normal;
+ $paragraph-font-weight: 400;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
@@ -1365,10 +1378,10 @@ $include-html-global-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: $oil;
-// $topbar-bg: $topbar-bg-color;
+ $topbar-bg: $artspace-floor;
 
 // Height and margin
-// $topbar-height: rem-calc(45);
+ $topbar-height: rem-calc(90);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1377,7 +1390,7 @@ $include-html-global-classes: $include-html-classes;
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: $oil;
-// $topbar-dropdown-link-color: $white;
+ $topbar-dropdown-link-color: $grayest;
 // $topbar-dropdown-link-bg: $oil;
 // $topbar-dropdown-link-bg-hover: $oil;
 // $topbar-dropdown-link-weight: $font-weight-normal;
@@ -1386,23 +1399,27 @@ $include-html-global-classes: $include-html-classes;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: $white;
-// $topbar-link-color-hover: $white;
+ $topbar-link-color: $grayest;
+ $topbar-link-color-hover: $lilac;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
-// $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+ $topbar-link-weight: bold;
+ $topbar-link-font-size: rem-calc(21);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-hover: $oil;
+ $topbar-link-bg-color-hover: $dark-lilac;
+ $topbar-link-bg-hover: $dark-lilac;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
-// $topbar-link-padding: ($topbar-height / 3);
+ $topbar-link-padding: ($topbar-height / 2);
 // $topbar-back-link-size: $h5-font-size;
 // $topbar-link-dropdown-padding: 20px;
+
+.top-bar-section li:not(.has-form) a:not(.button){
+	text-transform: lowercase;
+}
 
 // $topbar-button-font-size: 0.75rem;
 // $topbar-button-top: 7px;

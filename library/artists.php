@@ -62,41 +62,92 @@ function artist_metaboxes( array $meta_boxes ) {
      */
     $meta_boxes['artist_metabox'] = array(
         'id'            => 'artist_metabox',
-        'title'         => __( 'Test Metabox', 'cmb2' ),
-        'object_types'  => array( 'artist', ), // Post type
+        'title'         => __( 'General Info', 'cmb2' ),
+        'object_types'  => array( 'artists', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
         // 'cmb_styles' => false, // false to disable the CMB stylesheet
         'fields'        => array(
             array(
-                'name'       => __( 'Test Text', 'cmb2' ),
-                'desc'       => __( 'field description (optional)', 'cmb2' ),
-                'id'         => $prefix . 'text',
-                'type'       => 'text',
-                'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
-                // 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-                // 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-                // 'on_front'        => false, // Optionally designate a field to wp-admin only
-                // 'repeatable'      => true,
+                'name'    => 'Primary Media',
+                'id'      => $prefix . 'primary_media',
+                'type'    => 'text'
             ),
             array(
-                'name' => __( 'Website URL', 'cmb2' ),
-                'desc' => __( 'field description (optional)', 'cmb2' ),
+                'name'    => 'Secondary Media',
+                'id'      => $prefix . 'secondary_media',
+                'type'    => 'text'
+            ),
+            array(
+                'name' => 'Address',
+                'id' => $prefix . 'address',
+                'type' => 'textarea_small'
+            ),
+            array(
+                'name'    => 'Neighborhood',
+                'id'      => $prefix . 'neighborhood',
+                'type'    => 'text'
+            ),
+            array(
+                'name' => __( 'Website', 'cmb2' ),
                 'id'   => $prefix . 'url',
                 'type' => 'text_url',
                 // 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
                 // 'repeatable' => true,
             ),
             array(
-                'name' => __( 'Test Text Email', 'cmb2' ),
-                'desc' => __( 'field description (optional)', 'cmb2' ),
+                'name' => __( 'Email', 'cmb2' ),
                 'id'   => $prefix . 'email',
                 'type' => 'text_email',
                 // 'repeatable' => true,
             ),
         ),
     );
+
+    $meta_boxes['artiststatement_metabox'] = array(
+        'id'            => 'artiststatement_metabox',
+        'title'         => __( 'Statement & Bio', 'cmb2' ),
+        'object_types'  => array( 'artists', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'fields'        => array(
+            array(
+                'name' => 'Statement',
+                'id' => $prefix . 'statement',
+                'type' => 'wysiwyg',
+                'options' => array(),
+            ),
+            array(
+                'name' => 'Bio',
+                'id' => $prefix . 'bio',
+                'type' => 'wysiwyg',
+                'options' => array(),
+            ),
+        ),
+    );
+
+    $meta_boxes['selectedworks_metabox'] = array(
+        'id'            => 'selectedworks_metabox',
+        'title'         => __( 'Selected Works', 'cmb2' ),
+        'object_types'  => array( 'artists', ), // Post type
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        'fields'        => array(
+            array(
+                'name' => 'Selected Works',
+                'desc' => '',
+                'id' => $prefix . 'works',
+                'type' => 'file_list',
+                // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+            ),
+        ),
+    );
+
 
     // Add other metaboxes as needed
 

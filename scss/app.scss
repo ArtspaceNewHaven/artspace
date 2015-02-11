@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
 @import "settings";
 @import "foundation";
 
@@ -38,3 +39,7 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+@import "ui/nav";
+@import "ui/icon-fonts";
+@import "ui/footer";

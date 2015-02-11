@@ -1,0 +1,57 @@
+.about-us{
+	background: $cali-orange;
+	.sub-nav{
+		margin-bottom: 0;
+		li{
+			text-transform: uppercase;
+			font-style: italic;
+			padding-top: 8px;
+			padding-bottom: 10px;
+			a{
+				color: $lilac;
+				&:hover{
+					color: darken($lilac, 10%);
+				}
+			}
+			&.menu-shop, &.menu-subscribe, &.menu-contribute{
+				float: right;
+				background: #eaa823;
+				padding-left: 16px;
+				padding-right: 16px;
+				text-transform: lowercase;
+				a{
+					color: $blood-moon;
+					&:hover{
+						color: darken($blood-moon, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+nav.top-bar[role="navigation"]{
+		background: $artspace-floor; /* Old browsers */
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		//background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iIzFlNTc5OSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE3JSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE3JSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjE3JSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3ZGI5ZTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -moz-linear-gradient(left,  transparent 0%, transparent 289px, $artspace-floor 289px, $artspace-floor 100%); /* FF3.6+ */
+		background: -webkit-linear-gradient(left,  transparent 0px,transparent 289px, $artspace-floor 289px,$artspace-floor 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  transparent 0%,transparent 289px, $artspace-floor 289px,$artspace-floor 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  transparent 0%,transparent 289px, $artspace-floor 289px,$artspace-floor 100%); /* IE10+ */
+		background: linear-gradient(to right,  transparent 0%,transparent 289px, $artspace-floor 289px,$artspace-floor 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-8 */
+}
+.top-bar .name h1{
+	line-height: 0;
+	a{
+		padding-left: 0;
+		padding: 0;
+	}
+}
+
+section.filler-bg{
+	background-image: url('/wp-content/themes/artspace/images/jet-sky.jpg');
+	height: 80vh;
+	background-size: 100%;
+	background-position: 50% 50%;
+	margin-top: -5.5rem;
+}

@@ -1,0 +1,51 @@
+.footer-border{
+	background: $dark-lilac;
+	ul.sub-nav{
+		margin: 0rem 0 0rem;
+		padding-top: 0rem;
+		overflow: visible;
+		li{
+			background: $dark-lilac;
+			padding: 0px 9px;
+			position: relative;
+			font-size: rem-calc(20);
+			top: rem-calc(32);
+			a{
+				color: $lilac;
+				&:hover{
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+footer[role="main"]{
+	background: $lilac;
+}
+.footer-menus{
+	margin-top: 3rem;
+	padding-bottom: 2rem;
+	.widget{
+		h6{
+			text-transform: uppercase;
+			color: $dark-lilac;
+		}
+	}
+	ul.menu{
+		list-style: none;
+		margin-left: 0;
+		li{
+			a{
+				color: $dark-lilac;
+				&:hover{
+					color: darken($dark-lilac, 10%);
+				}
+			}
+		}
+	}
+}
+
+.hours-container{
+	background: #9685a0;
+}
