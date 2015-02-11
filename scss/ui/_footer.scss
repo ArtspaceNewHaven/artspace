@@ -44,8 +44,20 @@ footer[role="main"]{
 			}
 		}
 	}
+	p{
+		color: $dark-lilac;
+	}
 }
 
 .hours-container{
 	background: #9685a0;
+	padding: 1rem 1rem 6rem 2rem;
+	.open-next{
+		h6{
+			color: #dbd5e0;
+		}
+	}
+	h6{
+		color: $dark-lilac;
+	}
 }

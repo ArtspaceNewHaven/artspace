@@ -16,7 +16,9 @@
 				<?php do_action('SimpleSpaceship_before_footer'); ?>
 				<?php dynamic_sidebar("artspace-footer-widgets"); ?>
 				<?php do_action('SimpleSpaceship_after_footer'); ?>
-				<p class="copyright">Copyright © 2015  Artspace. All rights reserved. Terms and Conditions </p>
+			</div>
+			<div class="row">
+				<p class="copyright">Copyright © 2015  Artspace. All rights reserved. Terms and Conditions</p>
 			</div>
 		</div>
 		<div class="large-3 columns footer-section hours-container">
@@ -34,7 +36,9 @@
 			</div>
 		</div>
 		<div class="large-3 footer-section columns">
-			
+			<div class="row footer-logo">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-logo.png" alt="Artspace">
+			</div>
 		</div>
 	</div>
 </footer>

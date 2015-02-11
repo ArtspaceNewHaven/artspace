@@ -17,6 +17,7 @@ add_action( 'widgets_init', 'remove_parent_widgets', 11 );
 require_once( get_stylesheet_directory() . '/library/artists.php' );
 require_once( get_stylesheet_directory() . '/library/exhipitions.php' );
 require_once( get_stylesheet_directory() . '/library/opportunities.php' );
+require_once( get_stylesheet_directory() . '/library/flatfiles.php' );
 require_once( get_stylesheet_directory() . '/library/media-fields.php' );
 
 // Admin and Utility Functions
