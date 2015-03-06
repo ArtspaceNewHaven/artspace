@@ -24,7 +24,7 @@ function artists_post_type() {
 		'description'         => __( 'Artist post type', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'taxonomies'          => array(),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

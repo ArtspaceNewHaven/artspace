@@ -63,7 +63,7 @@ function artspace_locations() {
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
@@ -104,14 +104,14 @@ function exhibitiona_metaboxes( array $meta_boxes ) {
 			    'id'   => $prefix . 'start',
 			    'type' => 'text_date_timestamp',
 			    // 'timezone_meta_key' => $prefix . 'timezone',
-			     'date_format' => 'M j, Y @ g:ia',
+			     'date_format' => 'M j',
 			),
             array(
 			    'name' => 'End Date of Show',
 			    'id'   => $prefix . 'end',
 			    'type' => 'text_date_timestamp',
 			    // 'timezone_meta_key' => $prefix . 'timezone',
-			     'date_format' => 'M j, Y @ g:ia',
+			     'date_format' => 'M j',
 			),
         ),
     );
@@ -142,7 +142,7 @@ function exhibitiona_metaboxes( array $meta_boxes ) {
 
     $meta_boxes['exhib_images_metabox'] = array(
         'id'            => 'exhib_images_metabox',
-        'title'         => __( 'Exhibition Images', 'cmb2' ),
+        'title'         => __( 'Exhibition Details', 'cmb2' ),
         'object_types'  => array( 'exhibitions', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
@@ -151,11 +151,38 @@ function exhibitiona_metaboxes( array $meta_boxes ) {
         // 'closed'     => true, // Keep the metabox closed by default
         'fields'        => array(
             array(
+			    'name'    => 'Curator',
+			    'desc'    => '(optional)',
+			    'id'      => $prefix . 'curator',
+			    'type'    => 'text'
+			),
+            array(
 			    'name' => 'Images for Top Area',
 			    'desc' => 'Captions will be pulled from Media Library',
 			    'id' => $prefix . 'slides',
 			    'type' => 'file_list',
 			    // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+			),
+			array(
+			    'name' => 'Press Release PDF',
+			    'desc' => 'Upload a PDF of the Press Release',
+			    'id' => $prefix . 'press_release',
+			    'type' => 'file',
+			    // Optionally allow only attachments and not any URL (this hides the text input for the url):
+			    "options" => array(
+			        "url" => true
+			    )
+
+			),
+			array(
+			    'name' => 'Catalogue PDF',
+			    'id' => $prefix . 'catalogue',
+			    'type' => 'file',
+			    // Optionally allow only attachments and not any URL (this hides the text input for the url):
+			    "options" => array(
+			        "url" => true
+			    )
+
 			),
         ),
     );
@@ -220,5 +247,6 @@ function exhibitiona_metaboxes( array $meta_boxes ) {
 
     return $meta_boxes;
 }
+
 
 ?>

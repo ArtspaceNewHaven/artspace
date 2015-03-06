@@ -53,7 +53,7 @@
 	<?php get_template_part('partials/off-canvas-menu'); ?>
 
 <nav class="about-us">
-	<div class="row">
+	<div class="">
 		<?php
 
 			$defaults = array(
@@ -83,9 +83,10 @@
 
 	<?php get_template_part('partials/top-bar'); ?>
 
-<!-- section needs to be removed later -->
+<!-- section needs to be removed later 
 <section class="filler-bg">
 </section>
+-->
 
 <section class="container" role="document">
 	<?php do_action('SimpleSpaceship_after_header'); ?>

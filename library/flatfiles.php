@@ -21,7 +21,7 @@
 		'description'         => __( 'Flatfiles', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'page-attributes', ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'taxonomies'          => array(),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

@@ -1,0 +1,13 @@
+article{
+	.th {
+		line-height: 0;
+		display: inline-block;
+		border: none;
+		max-width: 100%;
+		box-shadow: none;
+		transition: all 200ms ease-out;
+		&:hover, &:focus {
+			box-shadow: none;
+		}
+	}
+}
