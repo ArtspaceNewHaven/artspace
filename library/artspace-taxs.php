@@ -29,7 +29,7 @@ function artspace_medium() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'medium', array( 'exhibitions', 'flatfiles', 'artists', 'attachment' ), $args );
+	register_taxonomy( 'medium', array( 'flatfiles', 'artists', 'attachment' ), $args );
 
 }
 
@@ -66,7 +66,7 @@ function artspace_keyword() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'keyword', array( 'exhibitions', 'flatfiles', 'artists', 'attachment' ), $args );
+	register_taxonomy( 'keyword', array( 'flatfiles', 'artists', 'attachment' ), $args );
 
 }
 

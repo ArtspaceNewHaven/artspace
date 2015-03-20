@@ -104,14 +104,14 @@ function exhibitiona_metaboxes( array $meta_boxes ) {
 			    'id'   => $prefix . 'start',
 			    'type' => 'text_date_timestamp',
 			    // 'timezone_meta_key' => $prefix . 'timezone',
-			     'date_format' => 'M j',
+			     'date_format' => 'M j, Y',
 			),
             array(
 			    'name' => 'End Date of Show',
 			    'id'   => $prefix . 'end',
 			    'type' => 'text_date_timestamp',
 			    // 'timezone_meta_key' => $prefix . 'timezone',
-			     'date_format' => 'M j',
+			     'date_format' => 'M j, Y',
 			),
         ),
     );
