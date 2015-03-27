@@ -1,21 +1,34 @@
-<?php get_header(); ?>
-<div class="row">
-	<div class="small-12 large-8 columns" role="main">
+<?php 
+// For Searching by Custom Post Type
+$post_type = $_GET['post_type'];
 
+get_header(); ?>
+<div class="row content-container" data-equalizer>
+
+	<aside class="large-3 columns left-col" data-equalizer-watch>
+	</aside>
+
+	<div class="small-12 large-9 columns" role="main" data-equalizer-watch>
 		<?php do_action('SimpleSpaceship_before_content'); ?>
 
 		<h2><?php _e('Search Results for', 'SimpleSpaceship'); ?> "<?php echo get_search_query(); ?>"</h2>
 
-	<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'partials/content', get_post_format() ); ?>
-		<?php endwhile; ?>
+		<?php
+			if ( isset( $post_type ) && $post_type == 'flatfiles' ) {
 
-		<?php else : ?>
+				// do something more here
+			  the_title( '<h5>', '</h5>', true );
+
+  		} else { echo 'We did not find anything.'; } ?>
+
+
+		<?php endwhile;  else : ?>
 			<?php get_template_part( 'partials/content', 'none' ); ?>
-
 	<?php endif;?>
+
+
 
 	<?php do_action('SimpleSpaceship_before_pagination'); ?>
 
@@ -30,6 +43,5 @@
 	<?php do_action('SimpleSpaceship_after_content'); ?>
 
 	</div>
-	<?php get_sidebar(); ?>
-
+</div>
 <?php get_footer(); ?>

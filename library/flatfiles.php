@@ -42,3 +42,92 @@
 
 // Hook into the 'init' action
 add_action( 'init', 'artspace_flatfile', 0 );
+
+
+/// Create Settings Area for Flatfiles
+class flatfiles_Admin {
+	private $key = 'flatfile_options';
+	protected $option_metabox = array();
+	protected $title = '';
+	protected $options_page = '';
+
+	public function __construct() {
+		// Set our title
+		$this->title = __( 'Flatfile Options', 'flatfiles' );
+
+		// Set our CMB2 fields
+		$this->fields = array(
+			array(
+				'name' => __( 'Section Title', 'flatfiles' ),
+				'id'   => 'title',
+				'type' => 'text',
+			),
+			array(
+			    'name' => 'Main Image',
+			    'desc' => 'Upload an image or enter an URL.',
+			    'id' => 'main_image',
+			    'type' => 'file',
+			    // 'allow' => array( 'url', 'attachment' ) // limit to just attachments with array( 'attachment' )
+			),
+			array(
+		    'name' => 'Info',
+		    'id' => 'info',
+		    'type' => 'textarea'
+			)
+			
+		);
+ 	}
+
+	public function hooks() {
+		add_action( 'admin_init', array( $this, 'init' ) );
+		add_action( 'admin_menu', array( $this, 'add_options_page' ) );
+	}
+
+	public function init() {
+		register_setting( $this->key, $this->key );
+	}
+
+	public function add_options_page() {
+		$this->options_page = add_submenu_page( 'edit.php?post_type=flatfiles', $this->title, $this->title, 'manage_options', $this->key, array( $this, 'admin_page_display' ) );
+	}
+
+	public function admin_page_display() {
+		?>
+		<div class="wrap cmb2_options_page <?php echo $this->key; ?>">
+			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+			<?php cmb2_metabox_form( $this->option_metabox(), $this->key ); ?>
+		</div>
+		<?php
+	}
+
+	public function option_metabox() {
+		return array(
+			'id'         => 'option_metabox',
+			'show_on'    => array( 'key' => 'options-page', 'value' => array( $this->key, ), ),
+			'show_names' => true,
+			'fields'     => $this->fields,
+		);
+	}
+
+	public function __get( $field ) {
+
+		// Allowed fields to retrieve
+		if ( in_array( $field, array( 'key', 'fields', 'title', 'options_page' ), true ) ) {
+			return $this->{$field};
+		}
+		if ( 'option_metabox' === $field ) {
+			return $this->option_metabox();
+		}
+
+		throw new Exception( 'Invalid property: ' . $field );
+	}
+
+}
+
+$flatfiles_Admin = new flatfiles_Admin();
+$flatfiles_Admin->hooks();
+
+function myprefix_get_option( $key = '' ) {
+	global $products_Admin;
+	return cmb2_get_option( $flatfiles_Admin->key, $key );
+}
