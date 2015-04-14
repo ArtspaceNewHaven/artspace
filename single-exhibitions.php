@@ -4,6 +4,7 @@ $start = get_post_meta( get_the_ID(), '_exhib_start', true );
 $end = get_post_meta( get_the_ID(), '_exhib_end', true );
 $press_release = get_post_meta( get_the_ID(), '_exhib_press_release', true );
 $catalogue = get_post_meta( get_the_ID(), '_exhib_catalogue', true );
+$curator = get_post_meta( get_the_ID(), '_exhib_curator', true );
 
 get_header(); ?>
 <div class="row content-container" data-equalizer>
@@ -75,10 +76,16 @@ get_header(); ?>
 			<h3 class="entry-title"><?php the_title(); ?></h3>
 			<p class="start-end"><time class="start"><?php echo date('M j', $start); ?></time> - <time class="end"><?php echo date('M j', $end); ?></time></p>
 		</header>
-		<div class="artist-list">
-			<h4>Featured Artists:</h4>
-			<ul class="no-bullet">
-				<?php $artists = get_post_meta( get_the_ID(), '_exhib_artists', true );
+
+		<div class="curator" style="padding-bottom: 1rem;">
+			
+
+				<strong>Curated By:</strong> <?php echo $curator; ?>
+		
+		</div>
+
+		<div class="artist-list" style="padding-bottom: 1rem;">
+			<strong>Featured Artists:</strong> <?php $artists = get_post_meta( get_the_ID(), '_exhib_artists', true );
 					foreach ( (array) $artists as $key => $artist ) {
 					    $name = $url = '';
 					    if ( isset( $artist['name'] ) )
@@ -86,16 +93,16 @@ get_header(); ?>
 					    if ( isset( $artist['url'] ) )
 					        $url = esc_html( $artist['url'] ); ?>
 
-					<li>
-					<a href="<?php echo $url; ?>"><?php echo $name; ?></a>
-					</li>
+
+					<a href="<?php echo $url; ?>" target="_blank"><?php echo $name; ?>,</a>
+
 				    
 				<?php } ?>
 			</ul>
 		</div>
 		<div class="exhibition-downloads">
-			<p>Full Press Release <a href="<?php echo $press_release; ?>" target="_blank">here</a></p>
-			<p>Download Catalogue <a href="<?php echo $catalogue; ?>" target="_blank">here</a></p>
+			<p>full press release <a href="<?php echo $press_release; ?>" target="_blank">here</a><br>
+			download catalogue <a href="<?php echo $catalogue; ?>" target="_blank">here</a></p>
 		</div>
 		<div class="related-events">
 			<header class="side-title">
@@ -104,22 +111,24 @@ get_header(); ?>
 				</div>
 			</header>
 			<div class="row">
-				<ul class="no-bullet related-list">
-				<?php
-					$related = get_posts(array(
-					    'post_type' => 'post' // Set post type you are relating to.
-					    ,'posts_per_page' => -1
-					    ,'post_belongs' => $post_id
-					    ,'post_status' => 'publish'
-					    ,'suppress_filters' => false // This must be set to false
-					  ));
-					 
-					foreach ($related as $related_post): ?>
-					 
-					  <li><?php echo $related_post->post_title; ?></li>
-					 
-					<?php endforeach; ?>
-				</ul>
+				<div class="large-12 columns">
+					<ul class="no-bullet related-list">
+					<?php
+						$related = get_posts(array(
+						    'post_type' => 'post' // Set post type you are relating to.
+						    ,'posts_per_page' => -1
+						    ,'post_belongs' => $post_id
+						    ,'post_status' => 'publish'
+						    ,'suppress_filters' => false // This must be set to false
+						  ));
+						 
+						foreach ($related as $related_post): ?>
+						 
+						  <li><?php echo $related_post->post_title; ?></li>
+						 
+						<?php endforeach; ?>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</aside>

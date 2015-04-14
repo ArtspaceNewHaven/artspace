@@ -5,7 +5,6 @@ Template Name: Home
 global $post;
 get_header(); ?>
 
-
 	<?php do_action('SimpleSpaceship_before_content'); ?>
 
 	<?php while (have_posts()) : the_post(); ?>
@@ -25,5 +24,6 @@ get_header(); ?>
 	<?php endwhile;?>
 
 	<?php do_action('SimpleSpaceship_after_content'); ?>
+
 
 <?php get_footer(); ?>
