@@ -49,5 +49,7 @@
 </div>
 <?php wp_footer(); ?>
 <?php do_action('SimpleSpaceship_before_closing_body'); ?>
+<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/app.js"></script>
 </body>
 </html>

@@ -1,5 +1,24 @@
 <?php
 
+/// Add ACF
+add_filter('acf/settings/path', 'acf_settings_path');
+ 
+function acf_settings_path( $path ) {
+    $path = get_stylesheet_directory() . '/library/acf/';
+    return $path;
+}
+
+add_filter('acf/settings/dir', 'acf_settings_dir');
+ 
+function acf_settings_dir( $dir ) {
+  $dir = get_stylesheet_directory_uri() . '/library/acf/';
+  return $dir;  
+}
+
+//add_filter('acf/settings/show_admin', '__return_false');
+
+include_once( get_stylesheet_directory() . '/library/acf/acf.php' );
+
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     //wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
@@ -25,3 +44,6 @@ require_once( get_stylesheet_directory() . '/library/artspace-taxs.php' );
 require_once( get_stylesheet_directory() . '/library/utility.php' );
 require_once( get_stylesheet_directory() . '/library/widget-areas.php' );
 require_once( get_stylesheet_directory() . '/library/post-archives.php' );
+
+// Add Options Pages
+require_once( get_stylesheet_directory() . '/library/option-pages.php' );

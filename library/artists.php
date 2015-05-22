@@ -107,43 +107,18 @@ function artist_metaboxes( array $meta_boxes ) {
 
     $meta_boxes['artiststatement_metabox'] = array(
         'id'            => 'artiststatement_metabox',
-        'title'         => __( 'Statement & Bio', 'cmb2' ),
+        'title'         => __( 'Statement', 'cmb2' ),
         'object_types'  => array( 'artists', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
         // 'cmb_styles' => false, // false to disable the CMB stylesheet
         'fields'        => array(
-            array(
-                'name' => 'Statement',
-                'id' => $prefix . 'statement',
-                'type' => 'wysiwyg',
-                'options' => array(),
-            ),
             array(
                 'name' => 'Bio',
                 'id' => $prefix . 'bio',
                 'type' => 'wysiwyg',
                 'options' => array(),
-            ),
-        ),
-    );
-
-    $meta_boxes['selectedworks_metabox'] = array(
-        'id'            => 'selectedworks_metabox',
-        'title'         => __( 'Selected Works', 'cmb2' ),
-        'object_types'  => array( 'artists', ), // Post type
-        'context'       => 'normal',
-        'priority'      => 'high',
-        'show_names'    => true, // Show field names on the left
-        // 'cmb_styles' => false, // false to disable the CMB stylesheet
-        'fields'        => array(
-            array(
-                'name' => 'Selected Works',
-                'desc' => '',
-                'id' => $prefix . 'works',
-                'type' => 'file_list',
-                // 'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
             ),
         ),
     );
