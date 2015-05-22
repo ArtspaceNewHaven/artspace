@@ -40,7 +40,7 @@ get_header(); ?>
 							'post_type' => 'artists',
 							'post_status' => 'publish'
 							),
-						'field_groups' => array(117,101),
+						'field_groups' => array('group_554cd3570863b', 'group_554cfdb5d1f9c'),
 						'fields' => false,
 						'post_title' => true,
 						'post_content' => true,
