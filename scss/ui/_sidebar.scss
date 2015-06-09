@@ -1,4 +1,47 @@
 // For Mixit Up
-#Container .mix{
-	display: none;
+#artist-Mixup{ 
+	padding-left: 0.9375rem;
+	.mix{
+		display: none;
+		a{
+			&:hover{
+				color: #e77d24;
+			}
+		}
+	}
+}
+.alpha-container{
+	padding-left: 0;
+	padding-right: 0;
+}
+#alpha{
+	background: #c6c6c6;
+	padding-left: 16px;
+}
+.filter{
+	&:hover{
+		color: #e77d24;
+		cursor: pointer;
+	}
+	&.active{
+		color: #e77d24;
+	}
+}
+.artist-alpha-list{
+	background-color: #d8d8d8;
+	padding-left: 0;
+}
+
+/// for Search and Filter
+.searchandfilter{
+	padding-top: 2rem;
+	ul{
+		margin-left: 0;
+	}
+	h4{
+		display: none;
+	}
+	input[type="submit"]{
+		@include button(rem-calc(10));
+	}
 }

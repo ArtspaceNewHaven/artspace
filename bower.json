@@ -1,6 +1,8 @@
 {
   "name": "foundation-libsass-template",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "masonry": "*",
+    "isotope": "*"
   }
 }

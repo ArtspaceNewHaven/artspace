@@ -41,41 +41,7 @@ function artspace_EXHIBITIONS() {
 
 }
 
-////////// Exhibitions Locations Taxonomy /////////
-function artspace_locations() {
 
-	$labels = array(
-		'name'                       => _x( 'Locations', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Location', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Locations', 'text_domain' ),
-		'all_items'                  => __( 'All Locations', 'text_domain' ),
-		'parent_item'                => __( 'Parent Location', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Location Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Location', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Location', 'text_domain' ),
-		'update_item'                => __( 'Update Location', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate locations with commas', 'text_domain' ),
-		'search_items'               => __( 'Search Locations', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove locations', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used locations', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => false,
-	);
-	register_taxonomy( 'location', array( 'exhibitions' ), $args );
-
-}
-
-// Hook into the 'init' action
-add_action( 'init', 'artspace_locations', 0 );
 
 add_action( 'init', 'artspace_EXHIBITIONS', 0 );
 

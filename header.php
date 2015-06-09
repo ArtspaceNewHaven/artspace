@@ -53,7 +53,7 @@
 	<?php get_template_part('partials/off-canvas-menu'); ?>
 
 <nav class="about-us">
-	<div class="">
+	<div class="row">
 		<?php
 
 			$defaults = array(

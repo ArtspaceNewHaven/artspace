@@ -1,7 +1,11 @@
+ul.sub-nav{
+	list-style: none;
+}
 .about-us{
 	background: $cali-orange;
 	.sub-nav{
 		margin-bottom: 0;
+		list-style: none;
 		li{
 			text-transform: uppercase;
 			font-style: italic;
@@ -39,7 +43,11 @@ nav.top-bar[role="navigation"]{
 		background: -ms-linear-gradient(left,  transparent 0%,transparent 289px, $artspace-floor 289px,$artspace-floor 100%); /* IE10+ */
 		background: linear-gradient(to right,  transparent 0%,transparent 289px, $artspace-floor 289px,$artspace-floor 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-8 */
+		.title-area{
+			width: 25%;
+		}
 }
+
 .top-bar .name h1{
 	line-height: 0;
 	a{

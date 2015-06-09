@@ -102,7 +102,7 @@ function artspace_location() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'location', array( 'artists', 'attachment' ), $args );
+	register_taxonomy( 'location', array( 'artists', 'attachment', 'exhibitions' ), $args );
 
 }
 
