@@ -2,9 +2,19 @@
 	.entry-content{
 		color: #5e5e5e;
 	}
+	.right-col{
+		.title-block{
+			header.row{
+				padding-top: 0.5rem;
+				background: #e4e4e4;
+			}
+		}
+		.artist-list, .exhibition-downloads{
+		background: #e4e4e4;
+		}
+	}
 }
 article.exhibitions{
-	padding: 2rem 0 6rem;
 	.feature-img{
 		width: 95%;
 	}
@@ -28,6 +38,11 @@ article.exhibitions{
 }
 
 /// Exhibition Sidebar Menu
+.side-menu{
+	.medium-9{
+		padding-right: 0;
+	}
+}
 .exhib-local-menu{
 	padding-top: 3rem;
 	li.location {
@@ -37,6 +52,7 @@ article.exhibitions{
 	  color: #5e5e5e;
 	  &>ul{
 	  	padding-top: 3rem;
+	  	margin-left: 0;
 	  }
 	  .cat-item{
 	  	margin-bottom: rem-calc(18);
@@ -47,9 +63,18 @@ article.exhibitions{
 	  }
 	}
 }
+.yearly-menu-container{
+	background: white;
+	border-right: 2px solid #e4e4e4;
+	padding-top: 9rem;
+	.yearly-menu{
+
+	}
+}
 
 /// Exhibition Archive
 .exhib-arch-main{
+	padding-top: 6rem;
 	padding-bottom: 4rem;
 }
 .on-view{
@@ -71,6 +96,9 @@ article.exhibitions{
 			opacity: 1;
 		}
 	}
+}
+.exhib-archive-list{
+
 }
 
 /// Location Taxonomy Exhibition

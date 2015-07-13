@@ -71,32 +71,42 @@ get_header(); ?>
 	</div>
 
 	<aside class="large-3 columns right-col">
-		<header>
-			<h3 class="entry-title"><?php the_title(); ?></h3>
-			<p class="start-end"><time class="start"><?php echo date('M j', $start); ?></time> - <time class="end"><?php echo date('M j', $end); ?></time></p>
-		</header>
-		<div class="artist-list">
+		<div class="title-block">
+			<header class="row">
+				<div class="small-12 columns">
+					<h3 class="entry-title"><?php the_title(); ?></h3>
+					<p class="start-end"><time class="start"><?php echo date('M j', $start); ?></time> - <time class="end"><?php echo date('M j', $end); ?></time></p>
+				</div>
+			</header>
+		</div>
+		<div class="artist-list row">
+			<div class="small-12 columns">
 			<h4>Featured Artists:</h4>
-			<ul class="no-bullet">
-				<?php $artists = get_post_meta( get_the_ID(), '_exhib_artists', true );
-					foreach ( (array) $artists as $key => $artist ) {
-					    $name = $url = '';
-					    if ( isset( $artist['name'] ) )
-					        $name = esc_html( $artist['name'] );
-					    if ( isset( $artist['url'] ) )
-					        $url = esc_html( $artist['url'] ); ?>
+				<ul class="no-bullet">
+					<?php $artists = get_post_meta( get_the_ID(), '_exhib_artists', true );
+						foreach ( (array) $artists as $key => $artist ) {
+						    $name = $url = '';
+						    if ( isset( $artist['name'] ) )
+						        $name = esc_html( $artist['name'] );
+						    if ( isset( $artist['url'] ) )
+						        $url = esc_html( $artist['url'] ); ?>
 
-					<li>
-					<a href="<?php echo $url; ?>"><?php echo $name; ?></a>
-					</li>
-				    
-				<?php } ?>
-			</ul>
+						<li>
+						<a href="<?php echo $url; ?>"><?php echo $name; ?></a>
+						</li>
+					    
+					<?php } ?>
+				</ul>
+			</div>
 		</div>
-		<div class="exhibition-downloads">
-			<p>Full Press Release <a href="<?php echo $press_release; ?>" target="_blank">here</a></p>
-			<p>Download Catalogue <a href="<?php echo $catalogue; ?>" target="_blank">here</a></p>
+		<div class="exhibition-downloads row">
+			<div class="small-12 columns">
+				<p>Full Press Release <a href="<?php echo $press_release; ?>" target="_blank">here</a></p>
+				<p>Download Catalogue <a href="<?php echo $catalogue; ?>" target="_blank">here</a></p>
+			</div>
 		</div>
+
+		<!--
 		<div class="related-events">
 			<header class="side-title">
 				<div class="row">
@@ -122,6 +132,7 @@ get_header(); ?>
 				</ul>
 			</div>
 		</div>
+	-->
 	</aside>
 
 	<?php endwhile;?>

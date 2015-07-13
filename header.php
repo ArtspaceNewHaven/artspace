@@ -1,3 +1,7 @@
+<?php
+global $post;
+?>
+
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
@@ -35,7 +39,17 @@
 	<?php do_action('SimpleSpaceship_after_body'); ?>
 	
 	<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
+	
+<?php
+	$bannerimage = get_field('banner_image');
+	$size = 'full'; // (thumbnail, medium, large, full or custom size)
+
+	if( $bannerimage ) {
+		echo '<div class="inner-wrap has-banner-img" style="background-image: url(' . wp_get_attachment_url( $bannerimage, $large ) . ');background-position-y: 40px;">';
+	} else {
+		echo '<div class="inner-wrap">';
+	}
+?>
 	
 	<?php do_action('SimpleSpaceship_layout_start'); ?>
 	
@@ -82,11 +96,6 @@
 </nav>
 
 	<?php get_template_part('partials/top-bar'); ?>
-
-<!-- section needs to be removed later 
-<section class="filler-bg">
-</section>
--->
 
 <section class="container" role="document">
 	<?php do_action('SimpleSpaceship_after_header'); ?>

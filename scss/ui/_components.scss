@@ -1,0 +1,16 @@
+
+/// Components
+.image-w-banner{
+	min-height: 240px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-size: cover;
+	background-position: center center;
+	.ribbon{
+		background: #e4d859;
+		h4{
+			color: white;
+		}
+	}
+}

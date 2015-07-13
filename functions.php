@@ -26,8 +26,13 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'child-foundation', get_stylesheet_directory_uri() . '/css/app.css' );
 
     wp_register_script( 'masonry', get_template_directory_uri() . '/bower_components/masonry/dist/masonry.pkgd.min.js', array('jquery'), '3.0.0', true );
+    wp_register_script( 'slick', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', array('jquery'), '1.5.5', true );
 
     wp_enqueue_script( 'masonry' );
+
+    if( is_page_template( 'templates/home.php' )) {
+      wp_enqueue_script('slick');
+    }
 }
 
 function remove_parent_widgets(){
@@ -50,3 +55,4 @@ require_once( get_stylesheet_directory() . '/library/post-archives.php' );
 
 // Add Options Pages
 require_once( get_stylesheet_directory() . '/library/option-pages.php' );
+

@@ -1,0 +1,25 @@
+/// Styles for Widgets
+section.container{
+	.widget{
+		&.widget_nav_menu{
+			padding: 0 3rem;
+			h6{
+				text-transform: lowercase;
+				padding: 3rem 0;
+			}	
+			ul{
+				list-style: none;
+				margin-left: 0;
+				li{
+					margin-bottom: 16px;
+					a{
+						color: $dark;
+						&:hover{
+							color: #f75421;
+						}
+					}
+				}
+			}
+		}
+	} 
+}

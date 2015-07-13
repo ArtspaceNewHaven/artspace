@@ -1,17 +1,20 @@
+$footer-dark: #3f3938;
+$footer-light: #e2e2e2;
+
 .footer-border{
-	background: $dark-lilac;
+	background: $footer-dark;
 	ul.sub-nav{
 		margin: 0rem 0 0rem;
 		padding-top: 0rem;
 		overflow: visible;
 		li{
-			background: $dark-lilac;
+			background: $footer-dark;
 			padding: 0px 9px;
 			position: relative;
 			font-size: rem-calc(20);
 			top: rem-calc(32);
 			a{
-				color: $lilac;
+				color: $footer-light;
 				&:hover{
 					color: white;
 				}
@@ -21,7 +24,7 @@
 }
 
 footer[role="main"]{
-	background: $lilac;
+	background: $footer-light;
 }
 .footer-menus{
 	margin-top: 3rem;
@@ -29,7 +32,7 @@ footer[role="main"]{
 	.widget{
 		h6{
 			text-transform: uppercase;
-			color: $dark-lilac;
+			color: $footer-dark;
 		}
 	}
 	ul.menu{
@@ -37,27 +40,30 @@ footer[role="main"]{
 		margin-left: 0;
 		li{
 			a{
-				color: $dark-lilac;
+				color: $footer-dark;
 				&:hover{
-					color: darken($dark-lilac, 10%);
+					color: darken($footer-dark, 10%);
 				}
 			}
 		}
 	}
 	p{
-		color: $dark-lilac;
+		color: $footer-dark;
+		&.copyright{
+			color: #c9c9c9;
+		}
 	}
 }
 
 .hours-container{
-	background: #9685a0;
+	background: #c9c9c9;
 	padding: 1rem 1rem 6rem 2rem;
 	.open-next{
 		h6{
-			color: #dbd5e0;
+			color: #f75421;
 		}
 	}
 	h6{
-		color: $dark-lilac;
+		color: $footer-dark;
 	}
 }

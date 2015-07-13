@@ -52,6 +52,11 @@ function media_metaboxes( array $meta_boxes ) {
                 'type' => 'text',
             ),
             array(
+                'name' => __( 'Website', 'cmb2' ),
+                'id'   => $prefix . 'size',
+                'type' => 'text_url',
+            ),
+            array(
                 'name' => __( 'Photo Credit', 'cmb2' ),
                 'id'   => $prefix . 'credit',
                 'type' => 'text',

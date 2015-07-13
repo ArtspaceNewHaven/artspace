@@ -3,6 +3,7 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "masonry": "*",
-    "isotope": "*"
+    "isotope": "*",
+    "slick.js": "~1.5.5"
   }
 }

@@ -27,6 +27,12 @@ $('.item-content').each(function(index){
 	});
 });
 
+/// Initialize Slick on the Homepage
+$('.slide-init').slick({
+	fade: true,
+	prevArrow: $('.slide-nav .ss-navigateleft'),
+	nextArrow: $('.slide-nav .ss-navigateright'),
+});
 /**
 * jQuery Stalactite : Lightweight Element Packing
 * Examples and documentation at: http://jonobr1.github.com/stalactite

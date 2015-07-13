@@ -1,0 +1,40 @@
+/// Home Page
+.page-template-home{
+	section.container{
+		margin-top: -65px;
+	}
+}
+.card{
+	border: 5px solid #e2e2e2;
+	&.home{
+		&:nth-child(1n+2){
+			margin-top: 1.5rem;
+		}
+		.copy-container{
+			padding: 10px;
+		}
+	}
+}
+
+/// With Sidebar Page
+.page-template-with-sidebar{
+	.adjusted-side{
+		background: none;
+	}
+	.gray-sidebar{
+		background: #e2e2e2;
+	}
+	.content-box{
+		padding-top: 3.5rem;
+	}
+	header{
+		.entry-title{
+			color: #fff;
+			text-shadow: 1px 2px 3px#9a8e7e;
+			font-size: rem-calc(50);
+		}
+	}
+	.entry-content{
+		padding: 2rem 0;
+	}
+}

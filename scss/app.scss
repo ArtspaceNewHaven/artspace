@@ -40,12 +40,17 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
+@import "pages";
+@import "models/slicks";
 @import "ui/nav";
 @import "ui/icon-fonts";
 @import "ui/grid";
+@import "ui/widgets";
 @import "ui/footer";
 @import "ui/images";
 @import "ui/sidebar";
 @import "models/exhibitions";
 @import "models/artists";
 @import "ui/helpers";
+@import "ui/components";
+@import "ui/banner-image";
