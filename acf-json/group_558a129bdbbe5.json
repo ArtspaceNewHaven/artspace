@@ -46,6 +46,13 @@
         "operator":"==",
         "value":"exhibitions"
       }
+    ],
+    [
+      {
+        "param":"post_type",
+        "operator":"==",
+        "value":"cwos"
+      }
     ]
   ],
   "menu_order":0,
@@ -54,5 +61,5 @@
   "label_placement":"top",
   "instruction_placement":"label",
   "hide_on_screen":"",
-  "modified":1436782326
+  "modified":1436783294
 }

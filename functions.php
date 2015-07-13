@@ -47,6 +47,7 @@ require_once( get_stylesheet_directory() . '/library/opportunities.php' );
 require_once( get_stylesheet_directory() . '/library/flatfiles.php' );
 require_once( get_stylesheet_directory() . '/library/media-fields.php' );
 require_once( get_stylesheet_directory() . '/library/artspace-taxs.php' );
+require_once( get_stylesheet_directory() . '/library/cwos.php' );
 
 // Admin and Utility Functions
 require_once( get_stylesheet_directory() . '/library/utility.php' );
