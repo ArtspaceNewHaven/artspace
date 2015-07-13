@@ -1,0 +1,56 @@
+{
+  "key":"group_55a38db9af7dc",
+  "title":"Artist Relationships",
+  "fields":[
+    {
+      "key":"field_55a38de7f3c7d",
+      "label":"Related Artists",
+      "name":"related_artists",
+      "type":"relationship",
+      "instructions":"",
+      "required":0,
+      "conditional_logic":0,
+      "wrapper":{
+        "width":"",
+        "class":"",
+        "id":""
+      },
+      "post_type":[
+        "artists"
+      ],
+      "taxonomy":[
+        
+      ],
+      "filters":[
+        "search"
+      ],
+      "elements":"",
+      "min":"",
+      "max":"",
+      "return_format":"object"
+    }
+  ],
+  "location":[
+    [
+      {
+        "param":"post_type",
+        "operator":"==",
+        "value":"flatfiles"
+      }
+    ],
+    [
+      {
+        "param":"attachment",
+        "operator":"==",
+        "value":"all"
+      }
+    ]
+  ],
+  "menu_order":0,
+  "position":"normal",
+  "style":"default",
+  "label_placement":"top",
+  "instruction_placement":"label",
+  "hide_on_screen":"",
+  "modified":1436782309
+}

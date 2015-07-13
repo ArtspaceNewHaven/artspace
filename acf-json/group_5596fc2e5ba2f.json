@@ -1,0 +1,97 @@
+{
+  "key":"group_5596fc2e5ba2f",
+  "title":"Exhibition Options",
+  "fields":[
+    {
+      "key":"field_5596fc4217ad7",
+      "label":"Current Exhibitions",
+      "name":"",
+      "type":"tab",
+      "instructions":"",
+      "required":0,
+      "conditional_logic":0,
+      "wrapper":{
+        "width":"",
+        "class":"",
+        "id":""
+      },
+      "placement":"top"
+    },
+    {
+      "key":"field_5596fca43ec26",
+      "label":"Main Gallery Show",
+      "name":"main_show_title",
+      "type":"text",
+      "instructions":"",
+      "required":0,
+      "conditional_logic":0,
+      "wrapper":{
+        "width":"",
+        "class":"",
+        "id":""
+      },
+      "default_value":"",
+      "placeholder":"Current Show Title",
+      "prepend":"",
+      "append":"",
+      "maxlength":"",
+      "readonly":0,
+      "disabled":0
+    },
+    {
+      "key":"field_5596fcdd3ec27",
+      "label":"Current Show",
+      "name":"current_show",
+      "type":"post_object",
+      "instructions":"",
+      "required":0,
+      "conditional_logic":0,
+      "wrapper":{
+        "width":"",
+        "class":"",
+        "id":""
+      },
+      "post_type":[
+        "exhibitions"
+      ],
+      "taxonomy":[
+        
+      ],
+      "allow_null":0,
+      "multiple":0,
+      "return_format":"object",
+      "ui":1
+    },
+    {
+      "key":"field_5596fd1bb8193",
+      "label":"Upcoming Exhibitions",
+      "name":"",
+      "type":"tab",
+      "instructions":"",
+      "required":0,
+      "conditional_logic":0,
+      "wrapper":{
+        "width":"",
+        "class":"",
+        "id":""
+      },
+      "placement":"top"
+    }
+  ],
+  "location":[
+    [
+      {
+        "param":"options_page",
+        "operator":"==",
+        "value":"acf-options-exhibition-opts"
+      }
+    ]
+  ],
+  "menu_order":0,
+  "position":"normal",
+  "style":"default",
+  "label_placement":"top",
+  "instruction_placement":"label",
+  "hide_on_screen":"",
+  "modified":1436782315
+}
