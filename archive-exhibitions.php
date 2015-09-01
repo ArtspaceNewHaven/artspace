@@ -41,6 +41,7 @@
 				<ul class="no-bullet yearly-menu">
 					<?php 
 						$yearly = array(
+							'post_type'    		=> 'exhibitions',
 							'type'            => 'yearly',
 							'limit'           => '',
 							'format'          => 'html', 
@@ -50,7 +51,7 @@
 							'echo'            => 1,
 							'order'           => 'DESC'
 						);
-						wp_get_archives( $yearly ); ?>
+						wp_get_archives_cpt( $yearly ); ?>
 					</ul>
 			</div>
 		</div>

@@ -23,7 +23,7 @@ function artspace_cwos() {
     'label'               => __( 'cwos', 'text_domain' ),
     'description'         => __( 'CWOS', 'text_domain' ),
     'labels'              => $labels,
-    'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', ),
+    'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'page-attributes' ),
     'hierarchical'        => false,
     'public'              => true,
     'show_ui'             => true,

@@ -48,6 +48,9 @@ require_once( get_stylesheet_directory() . '/library/flatfiles.php' );
 require_once( get_stylesheet_directory() . '/library/media-fields.php' );
 require_once( get_stylesheet_directory() . '/library/artspace-taxs.php' );
 require_once( get_stylesheet_directory() . '/library/cwos.php' );
+require_once( get_stylesheet_directory() . '/library/gala.php' );
+require_once( get_stylesheet_directory() . '/library/air.php' );
+
 
 // Admin and Utility Functions
 require_once( get_stylesheet_directory() . '/library/utility.php' );
@@ -56,4 +59,3 @@ require_once( get_stylesheet_directory() . '/library/post-archives.php' );
 
 // Add Options Pages
 require_once( get_stylesheet_directory() . '/library/option-pages.php' );
-
