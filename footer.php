@@ -1,4 +1,3 @@
-</section>
 <section class="footer-border">
 	<div class="row">
 		<ul class="sub-nav">

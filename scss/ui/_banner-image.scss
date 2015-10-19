@@ -1,3 +1,12 @@
+.page-banner-image {
+  background-size: cover;
+  background-position: center center;
+  min-height: rem-calc(250);
+  .row {
+    padding-top: 4.5rem;
+  }
+}
+
 .single-exhibitions{
   .has-banner-img{
     .left-col{

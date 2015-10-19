@@ -4,45 +4,17 @@ $start = get_post_meta( get_the_ID(), '_exhib_start', true );
 $end = get_post_meta( get_the_ID(), '_exhib_end', true );
 $press_release = get_post_meta( get_the_ID(), '_exhib_press_release', true );
 $catalogue = get_post_meta( get_the_ID(), '_exhib_catalogue', true );
-
+$bannerimage = get_field('banner_image');
 get_header(); ?>
+
+<section class="page-banner-image" style="background-image: url(<?php echo wp_get_attachment_url( $bannerimage ); ?>);">
+	<div class="row">
+		
+	</div>
+</section>
+
 <div class="row content-container" data-equalizer>
-
-<aside class="large-3 columns left-col" data-equalizer-watch>
-	<ul class="no-bullet">
-	<?php 
-	    $args = array(
-		'show_option_all'    => '',
-		'orderby'            => 'name',
-		'order'              => 'ASC',
-		'style'              => 'list',
-		'show_count'         => 0,
-		'hide_empty'         => 1,
-		'use_desc_for_title' => 1,
-		'child_of'           => 0,
-		'feed'               => '',
-		'feed_type'          => '',
-		'feed_image'         => '',
-		'exclude'            => '',
-		'exclude_tree'       => '',
-		'include'            => '',
-		'hierarchical'       => 1,
-		'title_li'           => __( 'Exhibitions' ),
-		'show_option_none'   => __( '' ),
-		'number'             => null,
-		'echo'               => 1,
-		'depth'              => 0,
-		'current_category'   => 0,
-		'pad_counts'         => 0,
-		'taxonomy'           => 'location',
-		'walker'             => null
-	    );
-	    wp_list_categories( $args ); 
-	?>
-	</ul>
-</aside>
-
-	<div class="small-12 large-6 columns" role="main" data-equalizer-watch>
+	<div class="small-12 medium-8 columns" role="main" data-equalizer-watch>
 
 	<?php do_action('SimpleSpaceship_before_content'); ?>
 
@@ -54,8 +26,51 @@ get_header(); ?>
 			<?php if ( has_post_thumbnail() ): ?>
 				<div class="row feature-container">
 					<?php the_post_thumbnail('', array('class' => 'feature-img')); ?>
-					<a href="#" class="more-photos">more photos</a>
+					<a href="#" data-reveal-id="exhibModal" class="more-photos">more photos</a>
 				</div>
+
+				<div id="exhibModal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+				<section role="slider" class="art-slider">
+					<div class="">
+					<ul class="no-bullet slide-init">
+				  <?php 
+				  $ids = get_field('related_media', false, false);
+
+					$args = array(
+						'post_type'      	=> 'attachment',
+						'posts_per_page'	=> 3,
+						'post__in'		=> $ids,
+						'post_status'		=> 'any',
+					);
+
+					$media_query = new WP_Query( $args );
+
+					if ( $media_query->have_posts() ) {
+						while ( $media_query->have_posts() ) {
+							$media_query->the_post();
+							// do something
+							$attachment_id = get_the_id(); ?>
+						<li><?php	echo wp_get_attachment_image( $attachment_id, 'large' ); ?></li>
+					<?php	}
+					} else {
+						// no posts found
+					}
+
+					// Restore original Post Data
+					wp_reset_postdata();
+
+				   ?>
+				   </ul>
+				   	</div>
+	<div class="slide-nav">
+		<div class="row">
+			<h1><i class="ss-icon ss-standard ss-navigateleft"></i> <i class="ss-icon ss-standard ss-navigateright"></i></h1>
+		</div>
+	</div>
+</section>
+				  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+				</div>
+
 			<?php endif; ?>
 			
 			<div class="row">
@@ -70,7 +85,7 @@ get_header(); ?>
 
 	</div>
 
-	<aside class="large-3 columns right-col">
+	<aside class="medium-4 columns right-col">
 		<div class="title-block">
 			<header class="row">
 				<div class="small-12 columns">
@@ -81,8 +96,8 @@ get_header(); ?>
 		</div>
 		<div class="artist-list row">
 			<div class="small-12 columns">
-			<h4>Featured Artists:</h4>
-				<ul class="no-bullet">
+			<p>Curated by: </p>
+			<p>Featuring Artists:
 					<?php $artists = get_post_meta( get_the_ID(), '_exhib_artists', true );
 						foreach ( (array) $artists as $key => $artist ) {
 						    $name = $url = '';
@@ -90,13 +105,9 @@ get_header(); ?>
 						        $name = esc_html( $artist['name'] );
 						    if ( isset( $artist['url'] ) )
 						        $url = esc_html( $artist['url'] ); ?>
-
-						<li>
-						<a href="<?php echo $url; ?>"><?php echo $name; ?></a>
-						</li>
-					    
+						<span class="featuring-artist"><a href="<?php echo $url; ?>"><?php echo $name; ?></a> ,</span>
 					<?php } ?>
-				</ul>
+					</p>
 			</div>
 		</div>
 		<div class="exhibition-downloads row">
@@ -106,33 +117,32 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<!--
-		<div class="related-events">
-			<header class="side-title">
-				<div class="row">
-					<h4>Related Events</h4>
+		<!-- sponsors component -->
+		<div class="sponsor-block row">
+			<div class="small-12 columns">
+				<header class="row">
+					<h4>Sponsors</h4>
+				</header>
+				<!-- sponsor images here -->
+				<div class="sponsors">
+					<p>A Text based sponsor</p>
 				</div>
-			</header>
-			<div class="row">
-				<ul class="no-bullet related-list">
-				<?php
-					$related = get_posts(array(
-					    'post_type' => 'post' // Set post type you are relating to.
-					    ,'posts_per_page' => -1
-					    ,'post_belongs' => $post_id
-					    ,'post_status' => 'publish'
-					    ,'suppress_filters' => false // This must be set to false
-					  ));
-					 
-					foreach ($related as $related_post): ?>
-					 
-					  <li><?php echo $related_post->post_title; ?></li>
-					 
-					<?php endforeach; ?>
+			</div>
+		</div>
+
+		<!-- current exhibitions block -->
+		<div class="current-exhibitions-block row">
+			<div class="small-12 columns">
+				<header class="row">
+					<h4>Current Exhibitions</h4>
+				</header>
+				<!-- exhibition list here -->
+				<ul class="no-bullet">
+					
 				</ul>
 			</div>
 		</div>
-	-->
+
 	</aside>
 
 	<?php endwhile;?>

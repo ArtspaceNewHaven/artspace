@@ -1,14 +1,61 @@
 .thumb-container{
 	padding-left: 0 !important;
 }
+.left-block {
+	.main-thumb {
+		background-position: center center;
+		background-size: cover;
+		transition: all 0.3s;
+	}
+}
+
+.artist-lead {
+	background-color: #e2e2e2;
+	padding: 1rem 0;
+	margin: 8px 0;
+	color: #5e5e5e;
+	h1,h2,h3,h4,h5,p {
+		color: #5e5e5e;
+	}
+}
+
+.contact-card-content {
+	padding: 2rem 0;
+	p {
+		margin-bottom: 5px;
+	}
+}
+
+.artist-gallery-blocks {
+	li {
+		position: relative;
+		background-size: cover;
+		background-position: center center;
+		transition: all 0.3s;
+		&:hover {
+			cursor: pointer;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				left:0;
+				top:0;
+				z-index: 2;
+				background: rgba(255,255,255,0.5);
+				background-position: center center;
+				background-size: cover;
+			}
+		}
+	}
+}
 
 /// For Artist Archive
 .header-text{
 	padding: 2rem 0;
 }
-.artist-search-form{
-	padding-top: 2rem;
-}
+
 .recently-updated{
 	background: #e3e3e3;
 	margin-bottom: 2rem;
@@ -21,6 +68,20 @@
 	.medium-block-grid-4{
 		padding-top: 2rem;
 	}
+}
+
+.artist-thumb-container {
+	height: rem-calc(200);
+	background-size: cover;
+	background-position: center center;
+}
+
+.alpha-artists {
+	 ul {
+		-webkit-column-count: 5;
+  	-moz-column-count: 5;
+  	column-count: 5;
+  }
 }
 
 /// For Single Artists

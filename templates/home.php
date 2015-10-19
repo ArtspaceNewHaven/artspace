@@ -93,7 +93,75 @@ get_header(); ?>
 		</ul>
 	</div>
 </section>
-			
+	
+<!-- test mini grid -->			
+<style>
+.grid {
+    position: relative;
+    margin: 0 auto;
+    width: 98%;
+}
+.grid-item{
+	top: 0;
+  left: 0;
+  width: 300px;
+  border-radius: 3px;
+  background-color: #536DFE;
+}
+</style>
+<section class="row">
+<div class="row">
+	<ul class="grid">
+		<li class="grid-item">
+			<div class="card home">
+					<img src="http://devslate.com/wp-content/uploads/2015/06/about_mission_01.jpg" alt="">
+					<div class="copy-container">
+						<h3>Now Accepting Applications</h3>
+						<h5 class="uppercase">SUMMER APRPRENTICESHIP PROGRAM</h5>
+						<p>Lorem ipsum dolor sit amet, nostrud apeirian lkis... <a href="#">more</a></p>
+					</div>
+				</div>
+		</li>
+		<li class="grid-item">
+			<div class="card home">
+					<div class="copy-container">
+						<h3>Now Accepting Applications</h3>
+						<h5 class="uppercase">SUMMER APRPRENTICESHIP PROGRAM</h5>
+						<p>Lorem ipsum dolor sit amet, nostrud apeirian lkis... <a href="#">more</a></p>
+					</div>
+				</div>
+		</li>
+		<li class="grid-item">
+			<div class="card home">
+					<div class="copy-container">
+						<h3>Now Accepting Applications</h3>
+						<h5 class="uppercase">SUMMER APRPRENTICESHIP PROGRAM</h5>
+						<p>Lorem ipsum dolor sit amet, nostrud apeirian lkis... <a href="#">more</a></p>
+					</div>
+				</div>
+		</li>
+		<li class="grid-item">
+			<div class="card home">
+					<img src="http://devslate.com/wp-content/uploads/2015/06/about_mission_03.jpg" alt="">
+					<div class="copy-container">
+						<h3>Now Accepting Applications</h3>
+						<h5 class="uppercase">SUMMER APRPRENTICESHIP PROGRAM</h5>
+						<p>Lorem ipsum dolor sit amet, nostrud apeirian lkis... <a href="#">more</a></p>
+					</div>
+				</div>
+		</li>
+		<li class="grid-item">
+			<div class="card home">
+					<div class="copy-container">
+						<h3>Now Accepting Applications</h3>
+						<h5 class="uppercase">SUMMER APRPRENTICESHIP PROGRAM</h5>
+						<p>Lorem ipsum dolor sit amet, nostrud apeirian lkis... <a href="#">more</a></p>
+					</div>
+				</div>
+		</li>
+	</ul>
+</div>
+</section>
 
 		</main>
 	<?php endwhile;?>
