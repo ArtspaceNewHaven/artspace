@@ -41,16 +41,31 @@ global $post;
 	<div class="off-canvas-wrap" data-offcanvas>
 	
 <?php
-	$bannerimage = get_field('banner_image');
-	$size = 'full'; // (thumbnail, medium, large, full or custom size)
-
-	if( $bannerimage ) {
-		echo '<div class="inner-wrap has-banner-img" style="background-image: url(' . wp_get_attachment_url( $bannerimage, $large ) . ');background-position-y: 40px;">';
-	} else {
-		echo '<div class="inner-wrap">';
+	/// Conditional Tag for Archive Pages
+/*
+	if (is_archive()) {
+		$arch_banner = get_field('arch_banner_image', 'option');
+		if ($arch_banner) {
+			echo '<div class="inner-wrap">';
+			echo '<img class="main-banner" src="' . wp_get_attachment_url( $arch_banner, $large ) . '" />';
+		} else {
+		echo '<div class="inner-wrap';
+		} 
 	}
+	//// Conditional for Single Posts
+	if (is_singular( array('exhibitions'))) {
+		$bannerimage = get_field('banner_image'); 
+		if( $bannerimage ) {
+			echo '<div class="inner-wrap">';
+			echo '<img class="main-banner" src="' . wp_get_attachment_url( $bannerimage, $large ) . '" />';
+		} else {
+			echo '<div class="inner-wrap">';
+		}
+	}
+	*/
 ?>
-	
+<div class="inner-wrap">
+
 	<?php do_action('SimpleSpaceship_layout_start'); ?>
 	
 	<nav class="tab-bar show-for-small-only">
@@ -97,5 +112,4 @@ global $post;
 
 	<?php get_template_part('partials/top-bar'); ?>
 
-<section class="container" role="document">
 	<?php do_action('SimpleSpaceship_after_header'); ?>

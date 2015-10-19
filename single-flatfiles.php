@@ -4,36 +4,6 @@ get_header(); ?>
 
 <div class="row content-container" data-equalizer>
 
-<aside class="large-3 columns left-col" data-equalizer-watch>
-
-	<div class="search-box">
-		<form method="get" action="<?php bloginfo('url'); ?>">
-		    <div><label class="screen-reader-text" for="s">Search</label>
-		    <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-		<?php
-		    wp_dropdown_categories(array('show_option_all' => 'All Keywords', 'name' => 'keyword', 'taxonomy' => 'keyword')); 
-		?>
-		    <input type="submit" id="searchsubmit" value="Search" />
-		    </div>
-		</form>
-	</div>
-
-	<div class="all-keywords">
-		<?php
-		 $terms = get_terms( 'keyword' );
-		 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-		     echo '<ul>';
-		     foreach ( $terms as $term ) {
-		       echo '<li><a href="' . get_term_link( $term ) . '">' . $term->name . '</a></li>';
-		        
-		     }
-		     echo '</ul>';
-		 }
-		?>
-	</div>
-
-</aside>
-
 <div class="small-12 large-9 columns" role="main" data-equalizer-watch>
 	<?php do_action('SimpleSpaceship_before_content'); ?>
 

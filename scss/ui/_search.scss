@@ -1,0 +1,18 @@
+.row.post-type-search {
+
+}
+
+.artist-search-form {
+  .search-field {
+
+  }
+  &:after {
+    content:'🔎';
+    font-family: "SSStandard";
+    position: absolute;
+    display: block;
+    bottom: 20px;
+    right: 24px;
+    color: #ccc;
+  }
+}

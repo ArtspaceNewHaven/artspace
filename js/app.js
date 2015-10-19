@@ -1,3 +1,26 @@
+/// Scripts for Exhibitions Page
+var bannerHeight = $('.main-banner').height();
+$('article.type-exhibitions').css('padding-top', bannerHeight - 20);
+
+/// Stuff for Artist Page
+var navHeight = $('.site-nav-wrapper').outerHeight();
+$('.page-banner-image').css('margin-top', - (navHeight + 5) );
+
+var featureHeight = $('.main-thumb').outerHeight();
+$('.artist-gallery-blocks li').css('height', featureHeight / 2);
+
+$('.artist-gallery-blocks li').click(function() { 
+		var currentBG = $(this).css('background-image');
+    $('.main-thumb').css('background-image', currentBG); 
+}); 
+// testing Minigrid
+
+minigrid('.grid', '.grid-item');
+
+window.addEventListener('resize', function(){
+  minigrid('.grid', '.grid-item');
+});
+
 $(document).foundation();
 
 $('.medium-block-grid-2 img').hover(function () {

@@ -1,31 +1,27 @@
 <?php 
 global $post;
 $opts = get_option('flatfile_options');
-
 get_header(); ?>
+
+<section class="page-banner-image" style="background-image: url(<?php the_field('_artist_arch_image', 'option'); ?>);">
+	<div class="row post-type-search">
+		<div class="medium-6 columns">
+			<h2>Flatfiles</h2>
+			<form role="search" method="get" class="artist-search-form" action="">
+				<label>
+					<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search flatfiles…', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+				</label>
+				<input type="hidden" name="post_type" value="flatfiles" />
+			</form>
+		</div>
+	</div>
+</section>
+
 <div class="row content-container" data-equalizer>
 
-	<aside class="large-3 columns left-col" data-equalizer-watch>
+	<div class="small-12 medium-12 columns" role="main" data-equalizer-watch>
 		
-		<form method="get" action="<?php bloginfo('url'); ?>">
-		    <div><label class="screen-reader-text" for="s">Search</label>
-		    <input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />
-		    <input type="hidden" name="post_type" value="flatfiles">
-		    <input type="submit" id="searchsubmit" value="Search" />
-		    </div>
-		</form>
-
-		<section class="filter-by">
-			<div class="row">
-				<h5 class="js-filter">Filter by</h5>
-			</div>
-		</section>
-
-	</aside>
-
-	<div class="small-12 large-9 columns" role="main" data-equalizer-watch>
 		<header class="row">
-			<img src="<?php echo $opts['main_image']; ?>" alt="Flatfiles">
 			<p><?php echo $opts['info']; ?></p>
 		</header>
 		

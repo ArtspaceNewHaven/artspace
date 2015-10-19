@@ -2,18 +2,17 @@
 /*
 Template Name: CWOS Feature
 */
-get_header(); ?>
+get_header('cwos'); ?>
 
-<div class="row" data-equalizer>
-  <div class="medium-3 columns adjusted-side" data-equalizer-watch>
-    <div class="row">
-      <div class="small-11 columns gray-sidebar" data-equalizer-watch>
-        <?php dynamic_sidebar('sidebar-widgets'); ?>
-      </div>
-    </div>
+<header class="row cwos-feature-image">
+  <div class="small-12 columns">
+    <img src="<?php the_field('header_image'); ?>" >
   </div>
+</header>
+
+<div class="row">
   
-  <div class="small-12 medium-9 columns content-box" role="main" data-equalizer-watch>
+  <div class="small-12 columns" role="main">
 
   <?php do_action('SimpleSpaceship_before_content'); ?>
 
@@ -36,24 +35,67 @@ get_header(); ?>
   <?php endwhile;?>
   <?php do_action('SimpleSpaceship_after_content'); ?>
 
+  <section class="cwos-flex">
     <div class="row">
-      <div class="medium-12 medium-centered columns">
-        <ul class="medium-block-grid-2">
+      <div class="small-12 columns">
+        <?php if( have_rows('cwos_flex_blocks') ):
+          while ( have_rows('cwos_flex_blocks') ) : the_row();
+            if( get_row_layout() == 'title_blocks' ): ?>
+              
+              <?php get_template_part( 'partials/blocks', 'banners' ); ?>
+
+          <?php elseif( get_row_layout() == 'content_block'): ?>
+            <h2><?php the_sub_field('title'); ?></h2>
+            <?php the_sub_field('wysiwyg'); ?>
+          <?php
+            endif; // gallery
+          endwhile; //
+          else :
+            // no layouts found
+          endif; ?>
+      </div>
+    </div>
+  </section>
+
+<!-- sponsorships go here -->
+  <section class="sponsors">
+    <header class="row">
+      <div class="small-12 columns">
+        <h4>Sponsors</h4>
+      </div>
+    </header>
+    <div class="row">
+      <div class="medium-12 columns">
+        <ul class="medium-block-grid-4">
+          <?php 
+          $sponsor_ids = get_field('connected_sponsors', false, false);
+          $args = array (
+            'post__in'               => $sponsor_ids,
+            'post_type'              => 'sponsors',
+            'orderby'                => 'rand',
+          );
+
+          $sponsor_query = new WP_Query( $args );
+          if ( $sponsor_query->have_posts() ) {
+            while ( $sponsor_query->have_posts() ) {
+              $sponsor_query->the_post(); ?>
+          
           <li>
-            <div class="image-w-banner vcenter-container" style="background-image: url(http://devslate.com/wp-content/uploads/2015/03/mainpage_cardimage_upcoming.jpg);">
-              <div class="vcenter-content">
-                <div class="ribbon text-center">
-                  <h4>2015</h4>
-                </div>
-              </div>
-            </div>
+            <?php the_post_thumbnail(); ?>
           </li>
-          <li>
-          </li>
+
+          <?php  }
+          } else {
+            // no posts found
+          }
+          // Restore original Post Data
+          wp_reset_postdata();
+        ?>
         </ul>
       </div>
     </div>
-
+  </section>
+  
   </div>
 </div>
 <?php get_footer(); ?>
