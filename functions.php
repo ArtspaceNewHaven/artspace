@@ -28,12 +28,17 @@ function theme_enqueue_styles() {
     wp_register_script( 'masonry', get_template_directory_uri() . '/bower_components/masonry/dist/masonry.pkgd.min.js', array('jquery'), '3.0.0', true );
     wp_register_script( 'slick', get_stylesheet_directory_uri() . '/js/slick/slick.min.js', array('jquery'), '1.5.5', true );
     wp_register_script( 'minigrid', get_stylesheet_directory_uri() . '/bower_components/minigrid/minigrid.min.js', array('jquery'), '1.6.3', true );
+    wp_register_script( 'motion-ui', get_stylesheet_directory_uri() . '/bower_components/motion-ui/dist/motion-ui.min.js', array('jquery'), '1.0.0', true );
+
 
     wp_enqueue_script( 'masonry' );
 
     if( is_page_template( 'templates/home.php' ) || is_singular('exhibitions')) {
       wp_enqueue_script('slick');
       wp_enqueue_script('minigrid');
+    }
+    if( is_page_template('templates/anniversary.php' )) {
+      wp_enqueue_script('motion-ui');
     }
 }
 

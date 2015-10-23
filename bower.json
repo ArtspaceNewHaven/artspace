@@ -2,8 +2,9 @@
   "name": "foundation-libsass-template",
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "masonry": "*",
     "isotope": "*",
+    "masonry": "*",
+    "motion-ui": "~1.0.1",
     "slick.js": "~1.5.5"
   }
 }

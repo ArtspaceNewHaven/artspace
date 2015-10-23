@@ -1,0 +1,51 @@
+{
+    "key": "group_562a2fb04bac8",
+    "title": "Anniversary Sponsors",
+    "fields": [
+        {
+            "key": "field_562a2fb6fe64a",
+            "label": "Anniversary Sponsors",
+            "name": "_ann_sponsors",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "sponsors"
+            ],
+            "taxonomy": [
+                
+            ],
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/anniversary.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1445605336
+}

@@ -65,9 +65,9 @@ global $post;
 	*/
 ?>
 <div class="inner-wrap">
-
 	<?php do_action('SimpleSpaceship_layout_start'); ?>
 	
+	<?php if(is_page_template('templates/anniversary.php' )) { } else { ?>
 	<nav class="tab-bar show-for-small-only">
 		<section class="left-small">
 			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
@@ -111,5 +111,6 @@ global $post;
 </nav>
 
 	<?php get_template_part('partials/top-bar'); ?>
+	<?php } /// end for anniversary template ?>
 
 	<?php do_action('SimpleSpaceship_after_header'); ?>
