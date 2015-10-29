@@ -98,7 +98,7 @@ get_header(); ?>
 		</div>
 		<div class="artist-list row">
 			<div class="small-12 columns">
-			<p>Curated by: </p>
+			<p>Curated by: <?php echo get_post_meta( get_the_ID(), '_exhib_curator', true ); ?></p>
 			<p>Featuring Artists:
 					<?php $artists = get_post_meta( get_the_ID(), '_exhib_artists', true );
 						foreach ( (array) $artists as $key => $artist ) {
@@ -115,35 +115,12 @@ get_header(); ?>
 		<div class="exhibition-downloads row">
 			<div class="small-12 columns">
 				<p>Full Press Release <a href="<?php echo $press_release; ?>" target="_blank">here</a></p>
+				<!--
 				<p>Download Catalogue <a href="<?php echo $catalogue; ?>" target="_blank">here</a></p>
+				-->
 			</div>
 		</div>
 
-		<!-- sponsors component -->
-		<div class="sponsor-block row">
-			<div class="small-12 columns">
-				<header class="row">
-					<h4>Sponsors</h4>
-				</header>
-				<!-- sponsor images here -->
-				<div class="sponsors">
-					<p>A Text based sponsor</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- current exhibitions block -->
-		<div class="current-exhibitions-block row">
-			<div class="small-12 columns">
-				<header class="row">
-					<h4>Current Exhibitions</h4>
-				</header>
-				<!-- exhibition list here -->
-				<ul class="no-bullet">
-					
-				</ul>
-			</div>
-		</div>
 
 	</aside>
 

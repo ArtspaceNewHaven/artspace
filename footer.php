@@ -1,10 +1,10 @@
 <section class="footer-border">
 	<div class="row">
 		<ul class="sub-nav">
-			<li><a href="#"><i class="ss-icon ss-social-regular ss-twitter"></i></a></li>
-			<li><a href="#"><i class="ss-icon ss-social-regular ss-facebook"></i></a></li>
-			<li><a href="#"><i class="ss-icon ss-social-regular ss-instagram"></i> </a></li>
-			<li><a href="#"><i class="ss-icon ss-social-regular ss-flickr"></i> </a></li>
+			<li><a href="https://twitter.com/ArtspaceNH"><i class="ss-icon ss-social-regular ss-twitter"></i></a></li>
+			<li><a href="http://www.facebook.com/artspacenh"><i class="ss-icon ss-social-regular ss-facebook"></i></a></li>
+			<li><a href="http://instagram.com/artspacenh"><i class="ss-icon ss-social-regular ss-instagram"></i> </a></li>
+			<li><a href="https://www.flickr.com/photos/64382138@N04"><i class="ss-icon ss-social-regular ss-flickr"></i> </a></li>
 		</ul>
 	</div>
 </section>
@@ -21,10 +21,6 @@
 			</div>
 		</div>
 		<div class="large-3 columns footer-section hours-container">
-			<div class="row open-next">
-				<h6>Open Next:</h6>
-				<h6>Wednesday 12pm</h6>
-			</div>
 			<div class="row hours">
 				<h6>Wednesday - Thursday</h6>
 				<h6>12 - 6pm</h6>
@@ -36,7 +32,7 @@
 		</div>
 		<div class="large-3 footer-section columns">
 			<div class="row footer-logo">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/footer-logo.png" alt="Artspace">
+				<img style="padding:2rem;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/30th_animation.gif" alt="Artspace 30th">
 			</div>
 		</div>
 	</div>

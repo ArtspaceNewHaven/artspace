@@ -15,11 +15,11 @@ $('.artist-gallery-blocks li').click(function() {
 }); 
 // testing Minigrid
 
-minigrid('.grid', '.grid-item');
+//minigrid('.grid', '.grid-item');
 
-window.addEventListener('resize', function(){
-  minigrid('.grid', '.grid-item');
-});
+//window.addEventListener('resize', function(){
+//  minigrid('.grid', '.grid-item');
+//});
 
 $(document).foundation();
 
@@ -27,9 +27,9 @@ $('.medium-block-grid-2 img').hover(function () {
   $('img.main-thumb').attr('src' ,$(this).attr('src'));
 });
 
-$(function(){
-	$('#Container').mixItUp();
-});
+//$(function(){
+//	$('#Container').mixItUp();
+//});
 
 $('.item-content').each(function(index){
 	var totalHeight = $(this).height();
@@ -56,6 +56,10 @@ $('.slide-init').slick({
 	prevArrow: $('.slide-nav .ss-navigateleft'),
 	nextArrow: $('.slide-nav .ss-navigateright'),
 });
+$('.timeline-slides').slick({
+  arrows: true,
+  dots: true
+  });
 /**
 * jQuery Stalactite : Lightweight Element Packing
 * Examples and documentation at: http://jonobr1.github.com/stalactite

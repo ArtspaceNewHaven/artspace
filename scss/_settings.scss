@@ -1412,8 +1412,8 @@ $gray-l2: #e2e2e2;
 // Set the link colors and styles for top-level nav
  $topbar-link-color: #3f3938;
  $topbar-link-color-hover: $lilac;
-// $topbar-link-color-active: $white;
-// $topbar-link-color-active-hover: $white;
+ $topbar-link-color-active: $dark-lilac;
+ $topbar-link-color-active-hover: lighten($dark-lilac, 10%);
  $topbar-link-weight: bold;
  $topbar-link-font-size: rem-calc(21);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%

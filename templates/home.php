@@ -69,9 +69,9 @@ get_header(); ?>
 								<ul class="medium-block-grid-2">
 									<li>
 										<div class="card home">
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/three-decades-exhib.jpg" alt="Three Decades of Change">
+											<a href="http://artspacenewhaven.org/exhibitions/three-decades-of-change/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/three-decades-exhib.jpg" alt="Three Decades of Change"></a>
 											<div class="copy-container">
-												<h3>Three Decades of Change</h3>
+												<h3><a href="http://artspacenewhaven.org/exhibitions/three-decades-of-change/">Three Decades of Change</a></h3>
 												<h5 class="uppercase">October 29-November 1, 2015</h5>
 												<p>Curated by Sarah Fritchey and Jeremy Wollin</p>
 											</div>
@@ -79,9 +79,9 @@ get_header(); ?>
 									</li>
 									<li>
 										<div class="card home">
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hello-world-thumb.jpg" alt="Hello World">
+											<a href="http://artspacenewhaven.org/exhibitions/hello-world/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hello-world-thumb.jpg" alt="Hello World"></a>
 											<div class="copy-container">
-												<h3>Hello World</h3>
+												<h3><a href="http://artspacenewhaven.org/exhibitions/hello-world/">Hello World</a></h3>
 												<h5 class="uppercase">December 4, 2015 - March 5, 2016</h5>
 												<p>Curated by JR Uretsky</p>
 											</div>
@@ -101,7 +101,7 @@ get_header(); ?>
 					</li>
 					<li>
 						<blockquote>
-							“A nurturing home for developing talent as well as a space devoted to exhibiting established local and regional artists. Truly one of the most impressive spaces in the City.”
+							“No other cultural event... brings the city so close together and involves the city so intensely.”
 							<cite>New Haven Advocate</cite>
 						</blockquote>
 					</li>
@@ -117,8 +117,16 @@ get_header(); ?>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore incidunt perferendis et ipsam, sint! Dignissimos id recusandae molestiae animi, minima praesentium quibusdam assumenda necessitatibus porro, rem accusantium consequuntur voluptates maiores.</p>
 					</div>
 				</header>
-				<div class="row p-y">
-					<img src="/wp-content/themes/artspace/images/timeline-1.png" alt="1980's Timeline">
+			</section>
+
+			<section role="slider" class="timeline-slider">
+				<div class="row">
+					<div class="timeline-slides">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timeline-1.png" alt="1980's Timeline">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timline-95s.jpg" alt="1990's Timeline">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timeline-2000s.jpg" alt="2000's Timeline">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timline-2015.jpg" alt="2010's Timeline">
+					</div>
 				</div>
 			</section>
 
@@ -128,20 +136,20 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="image-quote dark-lilac">
+			<section class="image-quote perfect-teal">
 				<ul class="medium-block-grid-2">
 					<li>
 						<div class="row">
 							<div class="medium-11 medium-centered columns">
 								<blockquote>
 									“A nurturing home for developing talent as well as a space devoted to exhibiting established local and regional artists. Truly one of the most impressive spaces in the City.”
-									<cite>New Haven Advocate</cite>
+									<cite>New Haven Advocate, 2003</cite>
 								</blockquote>
 							</div>
 						</div>
 					</li>
 					<li>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ann-image-1.jpg" >
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ann-image-2.jpg" >
 					</li>
 				</ul>
 			</section>
@@ -156,6 +164,18 @@ get_header(); ?>
 				<div class="row">
 					<div class="medium-6 columns">
 						<h2>30th News</h2>
+						<p>Thanks to supporters like you, we have accomplished extraordinary things in just 30 years, and redefined how a community sees itself, establishing New Haven as a vibrant nexus for visual artists. As we mark this milestone with an array of exciting celebratory events and reflective programs,  our job is also to ensure that we:</p>
+						<ul class="no-bullet">
+							<li style="padding-bottom:0.5rem"><strong>Enhance</strong> our exhibitions and educational programs to extend their reach and impact. </li>
+							<li style="padding-bottom:0.5rem"><strong>Equip</strong> artists and culture-bearers with resources for creative projects that will be path-breaking and consequential for Greater New Haven.</li>
+							<li style="padding-bottom:0.5rem"><strong>Attract and retain</strong> exemplary arts professionals who will make a commitment to New Haven and grow into Artspace’s next generation leadership.</li>
+							<li style="padding-bottom:0.5rem"><strong>Capitalize</strong> on the participation and visibility of City-Wide Open Studios to build community across sectors, with expanded planning, networking, and collaborations.</li>
+							<li style="padding-bottom:0.5rem"><strong>Make a sustained commitment</strong> to prepare today’s teens in the New Haven Public School district to succeed through such programs as our annual Summer Apprenticeship.</li>
+							<li style="padding-bottom:0.5rem">And, most directly,</li>
+							<li><strong>Position</strong> Artspace and the artist community for excellence and sustainability for the next 30 years.</li>
+						</ul>
+					<p>Thank you for being part of <strong>THREE DECADES OF CHANGE.</strong></p>
+
 					</div>
 					<div class="medium-6 columns">
 						<h2>Commmittee for the 30th</h2>
@@ -193,6 +213,7 @@ get_header(); ?>
 							<li>Susan Whetstone</li>
 							<li>Andy Wolf</li>
 						</ul>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-30th.png" alt="Three Decades of Change">
 					</div>
 				</div>
 			</section>

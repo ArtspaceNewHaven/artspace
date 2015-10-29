@@ -22,9 +22,7 @@
 }
 .image-quote {
   margin: 1rem 0;
-  &.dark-lilac {
-    background-color: $dark-lilac;
-    color: #fff;
+  color: #fff;
     blockquote {
       color: #fff;
       padding: 3rem 0;
@@ -33,6 +31,11 @@
         color: #fff;
       }
     }
+  &.dark-lilac {
+    background-color: $dark-lilac;
+  }
+  &.perfect-teal {
+    background-color: $perfect-teal;    
   }
   .medium-block-grid-2 {
     li {

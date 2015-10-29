@@ -19,7 +19,7 @@ get_header(); ?>
 
 <section class="featured-exhib">
 	<header class="row">
-		<h3>Featured Exhibitions</h3>
+		<h3></h3>
 	</header>
 	<?php 
 		// the query
