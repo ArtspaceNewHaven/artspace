@@ -39,120 +39,7 @@ get_header(); ?>
 				<?php the_content(); ?>
 			</div>
 
-			<section class="home-blocks">
-				<ul class="medium-block-grid-2">
-					<li>
-						<div class="row">
-							<div class="medium-10 medium-centered columns">
-								<header>
-									<h1>Events</h1>
-								</header>
-								<ul class="no-bullet event-list">
-									<li>
-			              <h4>Reunionizing, Union, and Re:Un: conversation with alumns on where we were then and where we are now <span class="event-date"><em>October 2016</em></span></h4>
-			      				<p>Day long series of moderated panels and project presentations, to coincide with Artspace’s 19th annual City-Wide Open Studios</p>
-			    				</li>
-			    				<li>
-			              <h4>Awakening the Architectural Ghosts of Artspace: A Performance and Processional  <span class="event-date"><em>June 2017</em></span></h4>
-			      				<p>To coincide with the International Festival of Arts + Ideas</p>
-			    				</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="row">
-							<div class="medium-12 columns">
-								<header>
-									<h1>Exhibitions</h1>
-								</header>
-								<ul class="medium-block-grid-2">
-									<li>
-										<div class="card home">
-											<a href="http://artspacenewhaven.org/exhibitions/three-decades-of-change/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/three-decades-exhib.jpg" alt="Three Decades of Change"></a>
-											<div class="copy-container">
-												<h3><a href="http://artspacenewhaven.org/exhibitions/three-decades-of-change/">Three Decades of Change</a></h3>
-												<h5 class="uppercase">October 29-November 1, 2015</h5>
-												<p>Curated by Sarah Fritchey and Jeremy Wollin</p>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="card home">
-											<a href="http://artspacenewhaven.org/exhibitions/hello-world/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hello-world-thumb.jpg" alt="Hello World"></a>
-											<div class="copy-container">
-												<h3><a href="http://artspacenewhaven.org/exhibitions/hello-world/">Hello World</a></h3>
-												<h5 class="uppercase">December 4, 2015 - March 5, 2016</h5>
-												<p>Curated by JR Uretsky</p>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</section>
-
-			<section class="image-quote dark-lilac">
-				<ul class="medium-block-grid-2">
-					<li>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ann-image-1.jpg" >
-					</li>
-					<li>
-						<blockquote>
-							“No other cultural event... brings the city so close together and involves the city so intensely.”
-							<cite>New Haven Advocate</cite>
-						</blockquote>
-					</li>
-				</ul>
-			</section>
-
-
-			<section class="ann-timeline">
-				<header class="row">
-				<hr>
-					<div class="medium-10 medium-centered columns text-center">
-						<h1>Our History</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore incidunt perferendis et ipsam, sint! Dignissimos id recusandae molestiae animi, minima praesentium quibusdam assumenda necessitatibus porro, rem accusantium consequuntur voluptates maiores.</p>
-					</div>
-				</header>
-			</section>
-
-			<section role="slider" class="timeline-slider">
-				<div class="row">
-					<div class="timeline-slides">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timeline-1.png" alt="1980's Timeline">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timline-95s.jpg" alt="1990's Timeline">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timeline-2000s.jpg" alt="2000's Timeline">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/timline-2015.jpg" alt="2010's Timeline">
-					</div>
-				</div>
-			</section>
-
-			<section class="ways-to-give">
-				<div class="row">
-					
-				</div>
-			</section>
-
-			<section class="image-quote perfect-teal">
-				<ul class="medium-block-grid-2">
-					<li>
-						<div class="row">
-							<div class="medium-11 medium-centered columns">
-								<blockquote>
-									“A nurturing home for developing talent as well as a space devoted to exhibiting established local and regional artists. Truly one of the most impressive spaces in the City.”
-									<cite>New Haven Advocate, 2003</cite>
-								</blockquote>
-							</div>
-						</div>
-					</li>
-					<li>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ann-image-2.jpg" >
-					</li>
-				</ul>
-			</section>
+			<hr>
 
 			<section class="how-to-give" style="padding: 3rem 0;">
 				<div class="row">
@@ -164,11 +51,6 @@ get_header(); ?>
 				</div>
 			</section>
 
-			<section class="ann-stories">
-				<div class="row">
-					
-				</div>
-			</section>
 
 			<section class="ann-news">
 				<div class="row">
@@ -227,7 +109,108 @@ get_header(); ?>
 					</div>
 				</div>
 			</section>
-	
+
+<!--
+			<section class="image-quote dark-lilac">
+				<ul class="medium-block-grid-2">
+					<li>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ann-image-1.jpg" >
+					</li>
+					<li>
+						<blockquote>
+							“No other cultural event... brings the city so close together and involves the city so intensely.”
+							<cite>New Haven Advocate</cite>
+						</blockquote>
+					</li>
+				</ul>
+			</section>
+			-->
+
+			<section class="home-blocks p-y">
+				<ul class="medium-block-grid-2">
+					<li>
+						<div class="row">
+							<div class="medium-10 medium-centered columns">
+								<header>
+									<h1>Events</h1>
+								</header>
+								<ul class="no-bullet event-list">
+									<li>
+			              <h4>Reunionizing, Union, and Re:Un: conversation with alumns on where we were then and where we are now <span class="event-date"><em>October 2016</em></span></h4>
+			      				<p>Day long series of moderated panels and project presentations, to coincide with Artspace’s 19th annual City-Wide Open Studios</p>
+			    				</li>
+			    				<li>
+			              <h4>Awakening the Architectural Ghosts of Artspace: A Performance and Processional  <span class="event-date"><em>June 2017</em></span></h4>
+			      				<p>To coincide with the International Festival of Arts + Ideas</p>
+			    				</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="row">
+							<div class="medium-12 columns">
+								<header>
+									<h1>Exhibitions</h1>
+								</header>
+								<ul class="medium-block-grid-2">
+									<li>
+										<div class="card home">
+											<a href="http://artspacenewhaven.org/exhibitions/three-decades-of-change/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/three-decades-exhib.jpg" alt="Three Decades of Change"></a>
+											<div class="copy-container">
+												<h3><a href="http://artspacenewhaven.org/exhibitions/three-decades-of-change/">Three Decades of Change</a></h3>
+												<h5 class="uppercase">October 29-November 1, 2015</h5>
+												<p>Curated by Sarah Fritchey and Jeremy Wollin</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="card home">
+											<a href="http://artspacenewhaven.org/exhibitions/hello-world/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hello-world-thumb.jpg" alt="Hello World"></a>
+											<div class="copy-container">
+												<h3><a href="http://artspacenewhaven.org/exhibitions/hello-world/">Hello World</a></h3>
+												<h5 class="uppercase">December 4, 2015 - March 5, 2016</h5>
+												<p>Curated by JR Uretsky</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+
+			<section class="ways-to-give">
+				<div class="row">
+					
+				</div>
+			</section>
+
+			<section class="image-quote perfect-teal">
+				<ul class="medium-block-grid-2">
+					<li>
+						<div class="row">
+							<div class="medium-11 medium-centered columns">
+								<blockquote>
+									“A nurturing home for developing talent as well as a space devoted to exhibiting established local and regional artists. Truly one of the most impressive spaces in the City.”
+									<cite>New Haven Advocate, 2003</cite>
+								</blockquote>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ann-image-2.jpg" >
+					</li>
+				</ul>
+			</section>
+
+			<section class="ann-stories">
+				<div class="row">
+					
+				</div>
+			</section>	
 
 		</main>
 	<?php endwhile;?>
