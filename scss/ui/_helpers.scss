@@ -14,4 +14,15 @@ section.container {
    	-webkit-transform: translate(0, -50%);
    	-moz-transform: translate(0,50%);
    }
-}   
+}
+
+.p-t {
+  padding-top: $rem-base !important;
+}
+.p-b {
+  padding-bottom: $rem-base !important;
+}
+.p-y {
+  padding-top: $rem-base !important;
+  padding-bottom: $rem-base !important;
+}

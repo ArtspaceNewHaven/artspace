@@ -1,15 +1,15 @@
-<?php get_header(); ?>
+<?php 
+$bannerimage = get_field('banner_image');
+get_header(); ?>
 
-<div class="row" data-equalizer>
-	<div class="medium-3 columns adjusted-side" data-equalizer-watch>
-		<div class="row">
-			<div class="small-12 columns">
-				Content here
-			</div>
-		</div>
+<section class="page-banner-image" style="background-image: url(<?php echo wp_get_attachment_url( $bannerimage ); ?>);">
+	<div class="row">
+		
 	</div>
-	
-	<div class="small-12 medium-9 columns content-box" role="main" data-equalizer-watch>
+</section>
+
+<div class="row">
+	<div class="small-12 medium-12 columns ann-page-content" role="main">
 
 	<?php do_action('SimpleSpaceship_before_content'); ?>
 

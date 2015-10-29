@@ -1,0 +1,100 @@
+/// Styles for the 30th Anniversary Page
+
+.color-orange {
+  color: $orange;
+}
+
+.ann-news {
+  background: $orange;
+  padding: 3rem 0;
+  color: #fff;
+  h1,h2,h3,h4,h5,p {
+    color: #fff;
+  }
+}
+.ann-timeline{
+  padding: 3rem 0;
+}
+.art-slide {
+  h1 {
+    text-transform: uppercase;
+  }
+}
+.image-quote {
+  margin: 1rem 0;
+  &.dark-lilac {
+    background-color: $dark-lilac;
+    color: #fff;
+    blockquote {
+      color: #fff;
+      padding: 3rem 0;
+      font-size: rem-calc(20);
+      cite {
+        color: #fff;
+      }
+    }
+  }
+  .medium-block-grid-2 {
+    li {
+      padding-bottom: 1px;
+    }
+  }
+}
+
+/// For Default Page Styles
+.ann-page-content {
+  padding: 2rem 0;
+}
+
+.dotted-line {
+  background: url(../images/dotted-line.png) no-repeat;
+  height: 30px;
+  width: 100%;
+  display: inline-block;
+}
+
+h1.dotted {
+  &:after {
+    content: '';
+    background: url(../images/dotted-line.png) no-repeat;
+    display: inline-block;
+    height: 30px;
+  }
+}
+
+.events-exhibs {
+  background-color: $hot-orange;
+  padding: 2rem 0;
+  color: $dark;
+}
+
+#annEvents {
+ .event-date {
+  font-size: 1rem;
+ } 
+}
+
+.exhib-list {
+  > li {
+    margin-bottom: 1rem;
+  }
+}
+
+.circle-thumb {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+#annTimeline {
+  padding: 2rem 0;
+}
+
+#annSponsors {
+  background-color: $gray-l2;
+  padding: 2rem;
+}
+
+.ann-story {
+  color: $gray;
+}

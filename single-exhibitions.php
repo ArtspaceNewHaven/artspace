@@ -26,7 +26,9 @@ get_header(); ?>
 			<?php if ( has_post_thumbnail() ): ?>
 				<div class="row feature-container">
 					<?php the_post_thumbnail('', array('class' => 'feature-img')); ?>
+					<!--
 					<a href="#" data-reveal-id="exhibModal" class="more-photos">more photos</a>
+					-->
 				</div>
 
 				<div id="exhibModal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">

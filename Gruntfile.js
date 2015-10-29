@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['bower_components/foundation/scss', 'bower_components/motion-ui/src']
+        includePaths: ['bower_components/foundation/scss']
       },
       dist: {
         options: {
@@ -17,26 +17,12 @@ module.exports = function(grunt) {
         }        
       }
     },
-    postcss: {
-        options: {
-            map: true,
-            processors: [
-                require('autoprefixer')({
-                    browsers: ['last 2 versions']
-                })
-            ]
-        },
-        dist: {
-            src: 'css/*.css'
-        }
-    },
-
     watch: {
       grunt: { files: ['Gruntfile.js'] },
 
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['postcss','sass']
+        tasks: ['sass']
       }
     }
   });
@@ -44,5 +30,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('build', ['sass']);
-  grunt.registerTask('default', ['postcss:dist','build','watch']);
+  grunt.registerTask('default', ['build','watch']);
 }

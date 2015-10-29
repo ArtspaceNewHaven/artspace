@@ -75,10 +75,11 @@ require_once( get_stylesheet_directory() . '/library/option-pages.php' );
 // Need to add if statement here 
   function custom_excerpt_length( $length ) {
     if (is_post_type_archive('exhibitions')) {
-      return 25;
+      return 20;
+    } if (is_page_template('templates/anniversary.php') ) {
+      return 20;
     } else {
       return 55;
     }
   }
   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
