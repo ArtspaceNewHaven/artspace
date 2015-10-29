@@ -154,6 +154,16 @@ get_header(); ?>
 				</ul>
 			</section>
 
+			<section class="how-to-give" style="padding: 3rem 0;">
+				<div class="row">
+					<div class="medium-10 medium-centered columns text-center">
+						<h1>Please Consider Supporting Artspace</h1>
+						<p>Artspace is a non-profit organization bringing communities together with emerging local and national artists</p>
+						<a href="http://artspacenh.org/support/support-artspace" target="_blank" class="button secondary">Learn More About Supporting Our Work</a>
+					</div>
+				</div>
+			</section>
+
 			<section class="ann-stories">
 				<div class="row">
 					
@@ -163,7 +173,7 @@ get_header(); ?>
 			<section class="ann-news">
 				<div class="row">
 					<div class="medium-6 columns">
-						<h2>30th News</h2>
+						<h2>Thank You</h2>
 						<p>Thanks to supporters like you, we have accomplished extraordinary things in just 30 years, and redefined how a community sees itself, establishing New Haven as a vibrant nexus for visual artists. As we mark this milestone with an array of exciting celebratory events and reflective programs,  our job is also to ensure that we:</p>
 						<ul class="no-bullet">
 							<li style="padding-bottom:0.5rem"><strong>Enhance</strong> our exhibitions and educational programs to extend their reach and impact. </li>

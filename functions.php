@@ -33,9 +33,9 @@ function theme_enqueue_styles() {
 
     wp_enqueue_script( 'masonry' );
 
-    if( is_page_template( 'templates/home.php' ) || is_singular('exhibitions')) {
+    if( is_page_template( 'templates/home.php' ) || is_singular('exhibitions') || is_page('history')) {
       wp_enqueue_script('slick');
-      wp_enqueue_script('minigrid');
+      //wp_enqueue_script('minigrid');
     }
     if( is_page_template('templates/anniversary.php' )) {
       wp_enqueue_script('motion-ui');
